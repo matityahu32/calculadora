@@ -1,1 +1,1 @@
-# calculadora
+Es una calculadora creada con Html , Css y Javascript puro.
