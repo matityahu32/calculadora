@@ -1,69 +1,100 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
 }
 
 body {
   min-height: 100vh;
-  background-color: #090c31;
+  background-color: #f9f9f9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .calculadora {
-  background-color:#15173c ;
-  color: white;
+  background-color: #fff;
+  color: #222;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   width: 350px;
-  max-width: 100%;
-  padding: 1.5rem;
+  max-width: 90%;
+  padding: 2rem;
   border-radius: 1rem;
-  gap: .5rem;
+  gap: 1rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
+.calculadora:hover {
+  transform: translate3d(11px, -1px, 5px);
+  box-shadow: 1px -1px 7px 1px rgb(39 115 195 / 86%);
+  background: linear-gradient(285deg, #9aebf5, #eeebf5);
+}
+
 .pantalla {
-  grid-column:  1 / -1;
-  background-color: #090c31;
+  grid-column: 1 / -1;
+  background-color: #f2f2f2;
   padding: 1.5rem;
   font-size: 2rem;
   text-align: right;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   margin-bottom: 1rem;
-  font-family: monospace;
-  font-weight: 600;
+  font-family: 'Consolas', 'Lucida Console', monospace;
+  font-weight: bold;
   overflow: hidden;
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.2), 0 2px 8px rgba(0, 0, 0, 0.1);
 }
+
 #valor-anterior {
   font-size: 1.5rem;
 }
+
 #valor-actual {
   font-size: 2rem;
 }
 
-button{
-  background-color: #15173c;
-  color: white;
-  border: 0;
-  padding: 1.5rem .5rem;
+button {
+  background-color: #f2f2f2;
+  color: #444;
+  border: none;
+  padding: 1.5rem 0.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
-
-.btn:hover{
-  background-color: #090c31;
+button:nth-child(3), button:nth-child(2){
+  background-color: rgba(240, 240, 30, 0.13);
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+button:nth-child(3):hover, button:nth-child(2):hover{
+  transform: scale(1.1);
+  background: linear-gradient(273deg, #98ed1059, #a4ef2d42);
+}
+.btn:hover {
+  transform: scale(1.1);
+  background: linear-gradient(273deg, #06d1eb2e, #ffffffe0);
+}
+.operadores {
+  background-color: rgba(240, 240, 30, 0.13);
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+.operadores:hover{
+  transform: scale(1.1);
+  background: linear-gradient(273deg, #98ed1059, #a4ef2d42);
 }
 #cero {
   grid-column: span 2;
-
 }
 
 #igual {
   grid-row: span 2;
-  background-color: #e6394a;
+  background-color: #e63946;
+  color: #fff;
 }
 
 #igual:hover {
