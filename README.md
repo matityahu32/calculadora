@@ -1,1 +1,5 @@
-Es una calculadora creada con Html , Css y Javascript puro.
+# Calculadora
+#### para crear esta calculadora se utilizo :
+- HTML
+- CSS
+- JavaScript
